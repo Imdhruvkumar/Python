@@ -21,3 +21,6 @@
 -Function , module , classes 
 
 -Advanced: Decorators, Generators, Iterators,MetaProgramming
+
+
+# this is about data types and object types in python.
