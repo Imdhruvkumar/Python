@@ -36,3 +36,70 @@ yearly_total = np.sum(data[:,1:],axis=0)
 
 #=========minimum sales per restaurent ================
 
+#------------------------------------------------
+
+min_sales = np.min(data[:,1:],axis=0)
+
+# print("column wise min data",min_sales)
+
+min_sales = np.min(data[:,1:],axis=1)
+
+# print("row wise min data",min_sales)
+
+#=========maximum sales per restaurent ================
+
+max_sales = np.max(data[:,1:],axis=0)
+
+# print("max sale cloumn ",max_sales)
+
+
+max_sales = np.max(data[:,1:],axis=1)
+
+# print("max sale row wise",max_sales)
+
+##===============average salse per restaurent==============
+
+avg_sales = np.average(data[:,1:],axis=0)
+
+# print("average column wise",avg_sales)
+
+avg_sales = np.average(data[:,1:],axis=1)
+
+# print("average row wise",avg_sales)
+
+#=============cumletive ====================
+#-----------adding row wise year per year-----
+
+cumsum = np.cumsum(data[:,1:],axis=1)
+# print(cumsum)
+# print(np.mean(cumsum,axis=0))
+#============= Using matplotlib ================
+
+# plt.figure(figsize=(8,5))
+# plt.plot(np.mean(cumsum,axis=0))
+# plt.title("Average cumlative sales accoros all restaurent")
+# plt.xlabel("years")
+# plt.ylabel("sales")
+# plt.grid(True)
+# plt.show()
+
+#============vecter========================
+
+vecter1 = np.array([1,2,3,4,5])
+
+vecter2 = np.array([6,7,8,9,0])
+
+# print("vecter addition",vecter1+vecter2)
+
+# print("multilication of vecter",vecter1*vecter2)
+
+# print("dot product",np.dot(vecter2,vecter1))
+
+
+rest_types = np.array(["green","maxican","orfin"])
+vecterized_upper = np.vectorize(str.upper)
+# print("vectorised upper",vecterized_upper(rest_types))
+
+monthly_avg = data[:,1:] / 12
+
+print(monthly_avg)
